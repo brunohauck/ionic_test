@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <ion-card *ngFor="let carro of carros"  id="home-card21">
+    <ion-list>
+      <ion-item color="none" id="home-list-item6">
+      </ion-item>
+      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+      <ion-item id="home-list-item-container2">
+        <div id="home-markdown2" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>
+              R${{ carro.preco }},00
+            </strong>
+          </p>
+        </div>
+      </ion-item>
+      <ion-item color="assertive" id="home-list-item7">
+        <ion-icon name="musical-notes" item-left></ion-icon>
+        {{ carro.nome }}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-content padding>
+    <ion-list>
+      <ion-item *ngFor="let carro of carros" (click)="seleciona(carro)">
+        {{ carro.nome }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-content>
