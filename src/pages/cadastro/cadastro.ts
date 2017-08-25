@@ -16,16 +16,13 @@ export class CadastroPage {
   constructor(public navCtrl: NavController, http: Http) {
 
     this.data = {};
-    this.data.name = '';
-    this.data.email = '';
     this.data.response = '';
     this.http = http;
     this.usuario = new Usuario(null, null, null);
 
   }
   submit() {
-    console.log("entrou 01");
-    //var link = 'http://nikola-breznjak.com/_testings/ionicPHP/api.php';
+
     var link = 'http://marmita.idsgeo.com/index.php/page/cadastrar_usuario_ionic';
     var data = JSON.stringify({ nome: this.usuario.nome, email: this.usuario.email, password: this.usuario.password });
 
@@ -39,5 +36,4 @@ export class CadastroPage {
         console.log("Oooops!");
       });
   }
-
 }

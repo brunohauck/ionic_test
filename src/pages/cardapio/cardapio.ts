@@ -11,7 +11,7 @@ import { FazerpedidoPage } from '../fazerpedido/fazerpedido';
 })
 export class CardapioPage {
 
-  public cardapios: Cardapio[];
+  public cardapios: Cardapio;
   public restaurante: Restaurante;
   public url: string;
   constructor(
